@@ -56,7 +56,7 @@ AssertionError: rotate_output operation failed
 现在需要你实现一个模拟的动态量化的推理，将`nn.Linear`变为一个`FakeQuantLinear`，示意图如下：
 ![linear](./fakequant.png)
 
-查看[linear.py](exam/fakequant.png)，完成其中的`FakeQuantLinear`，并使用`replace_linear_with_fakequant`来替换你的模型中的`nn.Linear`，对比量化前后模型输出差别。
+查看[linear.py](../fakequant/linear.py)，完成其中的`FakeQuantLinear`，并使用`replace_linear_with_fakequant`来替换你的模型中的`nn.Linear`，对比量化前后模型输出差别。
 
 #### 加分项：测试PPL
 在前面你已经完成了模型的旋转和`FakeQuant`操作，需要有一个指标直观的衡量旋转前后量化结果的差异，PPL是其中一个常用的指标。编写代码测试模型在某个数据集（如wikitext）上的PPL，对比以下几种情况的PPL:
